@@ -1,0 +1,58 @@
+<meta charset="UTF-8">
+<h1>PROGRAMA IMC</h1>
+<script>
+
+function saltarLinea() {
+    document.write("<br>");
+    document.write("<br>");    
+    document.write("<br>");
+}
+
+function imprimir(frase) {
+    document.write(frase);
+    saltarLinea();
+}
+
+// function calcularImc(peso, altura, nombre){
+
+//     imc = peso / (altura * altura);
+//     imprimir ("El imc calculado de " + nombre + " es " + imc);
+
+// }
+// calcularImc(60,1.68,"Agustin")
+
+function calcularImc(peso, altura){
+
+    return (peso / (altura * altura));
+}
+
+nombre = prompt("Informe su nombre.")
+pesoInformado = prompt(nombre + ", informe su peso.");
+alturaInformada = prompt(nombre + ", informe su altura.");
+
+imcCalculado = calcularImc (pesoInformado, alturaInformada);
+
+imprimir ("El imc calculado es: " + imcCalculado);
+
+//Imprimiendo if condiciones comparativas.
+if (imcCalculado < 18.5){
+    imprimir("Deficiencia/ABAJO de lo recomendado");
+
+}
+if(imcCalculado >= 18.5 &&imcCalculado < 25){
+        imprimir("NORMAL en los rangos considerados, recomendado");
+    
+}
+//Condicion de sobrepeso.
+if(imcCalculado >= 25.0 &&imcCalculado < 30){
+        imprimir("SOBREPESO en los rangos considerados, recomendado");
+    }
+
+if(imcCalculado >= 30){
+    imprimir("ARRIBA del IMC de lo recomendado tiene un nivel de OBESIDAD");
+
+}
+
+// imprimir ("El promedio del imc calculado de Agustin y Mario es: " + (calcularImc(60,1.68) + calcularImc(60,1.80))/2);
+
+</script>
